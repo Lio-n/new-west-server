@@ -9,7 +9,7 @@ Icon
 .Spotlight-V100
 .Trashes
 ._*
-
+graphql
 
 ############################
 # Linux
@@ -30,7 +30,7 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
-
+.env.production
 
 ############################
 # Packages
