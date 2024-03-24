@@ -15,7 +15,15 @@ export default [
   },
   "strapi::logger",
   "strapi::errors",
-  "strapi::cors",
+  {
+    name: "strapi::cors",
+    config: {
+      origin: ["https://new-west-app.vercel.app"],
+      methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
+      headers: ["Content-Type", "Authorization", "Origin", "Accept"],
+      keepHeaderOnError: true,
+    },
+  },
   "strapi::poweredBy",
   "strapi::query",
   "strapi::body",
