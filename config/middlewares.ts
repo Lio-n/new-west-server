@@ -20,7 +20,10 @@ export default [
     name: "strapi::cors",
     config: {
       enabled: true,
-      origin: "https://new-west-app.vercel.app",
+      origin: [
+        "https://new-west-app.vercel.app",
+        "https://new-west-server-production.up.railway.app",
+      ],
       methods: "*",
       headers: "*",
     },
