@@ -3,12 +3,17 @@ export default [
     name: "strapi::security",
     config: {
       contentSecurityPolicy: {
+        useDefaults: true,
         directives: {
           "frame-src": [
             "http://localhost:*",
             "self",
             "sandbox.embed.apollographql.com",
           ],
+          "connect-src": ["'self'", "https:"],
+          "img-src": ["'self'", "data:", "blob:", "res.cloudinary.com"],
+          "media-src": ["'self'", "data:", "blob:", "res.cloudinary.com"],
+          upgradeInsecureRequests: null,
         },
       },
     },
@@ -23,6 +28,7 @@ export default [
       origin: [
         "https://new-west-app.vercel.app",
         "https://new-west-server-production.up.railway.app",
+        "http://localhost:1337",
       ],
       methods: "*",
       headers: "*",
